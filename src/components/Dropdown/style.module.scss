@@ -1,0 +1,65 @@
+@import '../../styles/colors';
+
+.containerDropdown {
+  position: relative;
+  width: 100%;
+
+  .containerInput {
+    background: $WHITE;
+    border: 1px solid $WHITE-2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.1rem 0.6rem;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      border: 1px solid $BLUE;
+    }
+
+    .label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: $GRAY-2;
+
+      &.active {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $BLUE;
+        align-self: flex-start;
+      }
+    }
+
+    .arrow {
+      fill: $GRAY-2;
+    }
+  }
+
+  .options {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: $GRAY-2 0 0 10px 0px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-bottom: 4px;
+    padding-top: 2px;
+
+    &.hide {
+      display: none !important;
+    }
+  }
+}
